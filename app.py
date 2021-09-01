@@ -37,7 +37,7 @@ from numpy import asarray
 app = Flask(__name__)
 api = Api(app)
 
-app.config['MONGO_URI'] = "mongodb+srv://avik6028:avik240299@cluster0.ofqrh.mongodb.net/optum?retryWrites=true&w=majority"
+app.config['MONGO_URI'] = "mongodb+srv://sherlock:sherlock@cluster0.nxzxj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 mongo = PyMongo(app)
 
