@@ -2,9 +2,8 @@
 
 ### COVID-19 Prediction Powered by AI
 
-![COVID CNN Docker Build](https://github.com/TheDarkKnight-1/covid-prediction-classifier/workflows/COVID%20CNN%20Docker%20Build/badge.svg?branch=master) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg) [![Live Demo](https://img.shields.io/badge/Live-Heroku-purple.svg)](https://medvista.herokuapp.com) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg) [![Live Demo](https://img.shields.io/badge/Live-Heroku-purple.svg)](https://medvista.herokuapp.com) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-**DockerHub** : avik6028/covid_predictor_flask_cnn:1.0.0
 
 The project is a **Computer Aided Diagnostic System** which is used to predict whether a person has been infected with **COVID-19**. Currently, the reference project does the only **classification** between COVID and non-COVID X-Rays using Modified DenseNet architectures. This project involves a Web Application, REST API, Dockerhub Container and automated pipeline to deploy COVID Prediction model based on Chest Radiological Images. Containerized Deployment ensures platform independence during deployment.
 
