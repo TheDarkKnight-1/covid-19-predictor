@@ -2,7 +2,7 @@
 
 ### COVID-19 Prediction Powered by AI
 
-![COVID CNN Docker Build](https://github.com/Lucifergene/covid-prediction-classifier/workflows/COVID%20CNN%20Docker%20Build/badge.svg?branch=master) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg) [![Live Demo](https://img.shields.io/badge/Live-Heroku-purple.svg)](https://medvista.herokuapp.com) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![COVID CNN Docker Build](https://github.com/TheDarkKnight-1/covid-prediction-classifier/workflows/COVID%20CNN%20Docker%20Build/badge.svg?branch=master) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg) [![Live Demo](https://img.shields.io/badge/Live-Heroku-purple.svg)](https://medvista.herokuapp.com) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 **DockerHub** : avik6028/covid_predictor_flask_cnn:1.0.0
 
