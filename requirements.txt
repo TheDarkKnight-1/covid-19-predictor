@@ -10,3 +10,5 @@ opencv-python-headless
 flask_pymongo
 dnspython
 urllib3
+tensorflow==2.6.0
+
