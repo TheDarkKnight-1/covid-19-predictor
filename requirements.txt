@@ -1,0 +1,12 @@
+Werkzeug
+Flask
+Flask-RESTful
+numpy
+Keras
+gevent
+pillow
+h5py
+opencv-python-headless
+flask_pymongo
+dnspython
+urllib3

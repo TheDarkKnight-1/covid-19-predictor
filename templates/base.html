@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <!-- basic -->
+       <meta charset="utf-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!-- mobile metas -->
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+       <!-- site metas -->
+       <title>COVID-Predictioned</title>
+       <meta name="keywords" content="COVID-19, Flask, Web App, Github Actions, Docker, Container, Heroku, CNN, Deep Learning, Classifier, Research">
+       <meta name="description" content="Web Application, REST API, Dockerhub Container and automated pipeline to deploy COVID Prediction model based on Chest Radiological Images.">
+       <meta name="author" content="Avik Kundu">
+
+       <!-- classifier css file -->
+       <link rel="stylesheet" type="text/css" href="static/main.css">
+      
+       <!-- bootstrap css -->
+       <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+       <!-- style css -->
+       <link rel="stylesheet" type="text/css" href="static/css/style.css">
+       <!-- Responsive-->
+       <link rel="stylesheet" href="static/css/responsive.css">
+       <!-- fevicon -->
+       <link rel="icon" href="static/images/fevicon.png" type="image/gif" />
+       <!-- Scrollbar Custom CSS -->
+       <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.min.css">
+       <!-- Tweaks for older IEs-->
+       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+       <!-- owl stylesheets --> 
+       <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+       <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+  </head>
+
+   
+  <body>
+    <!-- header section start -->
+    <div class="header_section">
+      <div class="container-fluid">
+            <div class="main">
+               <div class="logo"><a href="{{ url_for(request.endpoint) }}"><img src="static/images/logos1.png"></a></div>
+               <div class="menu_text">
+                  <ul>
+                     <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                          
+                           <a href="#home">Home</a>
+                           <a href="#abstract">Abstract</a>
+                           <a href="#cnn">CNN Architecture</a>
+                           <a href="#doctor">Doctor's Opinion</a>
+                           <a href="#model">Interactive Model</a>
+                           <a href="#api">REST API</a>
+                           <a href="#architecture">Deployment</a>
+                           <a href="#contact">Contact</a>
+                        </div>
+                     </div>
+                     <span class="navbar-toggler-icon"></span>
+                     <span onclick="openNav()"><img src="static/images/toogle-icon.png" class="toggle_menu"></span>
+                     <span onclick="openNav()"><img src="static/images/toogle-icon1.png" class="toggle_menu_1"></span>
+                  </ul>
+               </div>
+            </div>
+         </div>
+    
+   <!-- banner section start -->
+   <div class="banner_section layout_padding" id="home">
+      <div class="container">
+         <div id="my_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="container">
+                           <h1 class="banner_taital">COVID-19 PREDICTION POWERED BY AI</h1>
+                           <p class="banner_text">
+                              This project involves an Web Application, REST API, Dockerhub Container and automated pipeline to deploy COVID Prediction model based on Chest Radiological Images. Containerized Deployment ensures platform independance during deployment.
+                           </p>
+                           <div class="more_bt"><a href="#model">Interactive Model</a></div>
+                           <div class="more_bt"><a href="#api">REST API</a></div>
+                           <div class="more_bt"><a href="https://hub.docker.com/r/avik6028/covid_predictor_flask_cnn/" target="_blank">Docker Image</a></div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="banner_img"><img src="static/images/banner-img.png"></div>
+                     </div>
+                  </div>
+               </div>              
+            </div>
+         </div>
+      </div>            
+   </div>
+  
+   <!-- banner section end -->
+   </div>  
+   <!-- header section end -->
+   
+   <!-- abstract section start -->
+    <div class="about_section layout_padding" id="abstract">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <br><br><br><br><br>
+               <div class="about_img"><img src="static/images/img-1.png"></div>
+            </div>
+            <div class="col-md-8">
+               <h1 class="about_taital">Abstract</span></h1>
+               <p align="justify" class="about_text">COVID-19 or novel coronavirus disease, which has already been declared as a worldwide pandemic, at first had an outbreak in a small town of China, named Wuhan. More than two hundred countries around the world have already been affected by this severe virus as it spreads by human interaction. Moreover, the symptoms of novel coronavirus are quite similar to the general flu. Screening of infected patients is considered as a critical step in the fight against COVID-19. Therefore, it is highly relevant to recognize positive cases as early as possible to avoid further spreading of this epidemic. However, there are several methods to detect COVID-19 positive patients, which are typically performed based on respiratory samples and among them one of the critical approach which is treated as radiology imaging or X-Ray imaging. Recent findings from X-Ray imaging techniques suggest that such images contain relevant information about the SARS-CoV-2 virus.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- abstract section end -->
+
+    <!-- cnn section start -->
+    <div class="protect_section layout_padding" id="cnn">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <h1 class="protect_taital">     
+               Using Chest X-Ray Images for Predictions</h1><br>
+               <p class="protect_text">Deep learning techniques showed in the last years promising results to accomplish radiological tasks by automatic analyzing multimodal medical images. In previous studies, DCNNs have been exploited in X-ray image classification to successfully diagnose common chest diseases such as Tuberculosis screening and mediastinal lymph nodes in CT images. However, the application of deep learning techniques to identify and detect novel COVID-19 in X-ray is still very limited so far. Therefore, in this project the aim is to propose a framework based of pre-trained deep learning classifiers as an advanced tool to assist radiologists to automatically diagnose COVID-19 in X-ray images.
+               Due to shortage of proper X-ray samples, neural networks become difficult to train. Therefore to compensate this, the model is trained previously on datasets containing information about various chest related infections.</p>
+            </div>
+         </div>
+         <div class="protect_section_2 layout_padding">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="image_2"><img src="static/images/cnn.png"></div>
+               </div>
+            </div>
+         </div>
+        
+      </div>
+   </div>
+   <!-- cnn section end -->
+
+   <!-- doctor section start -->
+   <div class="doctors_section layout_padding" id="doctor">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="taital_main">
+                  <div class="taital_left">
+                     <div class="play_icon"><img src="static/images/play-icon.png"></div>
+                  </div>
+                  <div class="taital_right">
+                     <h1 class="doctor_taital">What doctors say..</h1>
+                     <p class="doctor_text">The COVID-19 pandemic has brought radiologists’ penchant for descriptive terms front-and-centre, with frequent references to one feature in particular: ground-glass opacities. The term refers to the hazy, white-flecked pattern seen on lung CT scans, indicative of increased density. Ground-glass opacities aren’t likely to be found in healthy lungs, though, and wouldn’t result from exposures like air pollution or smoking. There are a lot of diseases that can cause ground-glass opacities, but in COVID-19, there’s a distinct distribution, a preference for certain parts of the lung. COVID-related ground-glass opacities also have a very round shape that’s unusual compared with other ground-glass opacities. </p>
+                     <div class="readmore_bt"><a target="_blank" href="https://radiologyassistant.nl/chest/covid-19/covid19-imaging-findings">Read More</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- doctor section end -->
+  
+   <!-- Model section start -->
+   {% block contentier %}{% endblock %}
+   <!-- Model section end -->
+
+   <!-- API section start -->
+   <div class="protect_section layout_padding" id="api">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <h1 class="protect_taital">REST API Usage</h1>
+               <p class="protect_text_api">You can use curl to test the API or any other API testing tool like POST man </p>
+            </div>
+         </div>
+         <div class="protect_section_2 layout_padding">
+            <div class="row">
+               <div class="col-md-8">
+                  <pre width="150px"><code>$ curl -i \<br>  -X POST \<br>  -H "Content-Type: multipart/form-data" \<br>  -F "image=@&lt;your_image_name&gt;" \<br>   http://covid-predictioned.herokuapp.com/api</code></pre>
+
+                  <br>
+
+                  <pre>HTTP/1.1 200 OK<br>Content-Type: application/json<br>Content-Length: 255<br>Server: Werkzeug/0.14.1 Python/3.6.7<br>Date: Sun, 30 Aug 2020 17:44:32 GMT<br><br>{<br>"API vesion": "1",<br>"Response time": "0.3548761470010504 seconds",<br>"disclaimer": "This API does not claim any medical correctness for the rendered results",<br>  "result": {<br>    "Message":"Image successfully received",<br>    "confidence": 0.0659821480512619,<br>    "predicted_label": "Normal"<br>  }<br>}</pre>
+               </div>
+               <div class="col-md-4">
+                  <div><img class="image_21" src="static/images/img-2.png"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- api section end -->
+ 
+    
+   <!-- architecture section start -->
+   <div class="architecture_section layout_padding" id="architecture">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <h1 class="protect_taital">     
+               Deployment Architecture</h1><br>
+               <p class="protect_text"></p>
+            </div>
+         </div>
+         <div class="protect_section_2 layout_padding">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="box_main_workflow"><img src="static/images/workflow.png"></div>
+               </div>
+            </div>
+         </div>        
+      </div>
+   </div>
+   <!-- architecture section end -->
+ 
+ 
+  <!-- Feedback section start -->
+   <div class="update_section" id="contact">
+      <div class="container">
+         <h1 class="update_taital">Your Feedback is Important </h1>
+         <form target="_blank" action="https://formsubmit.co/kundu.abheek1999@gmail.com" method="POST">
+            <div class="form-group">
+              <textarea placeholder="Your Thoughts..." class="update_mail" name="message" rows="5" required></textarea>
+            </div>
+            <div class="text-center">
+               <button class="btn btn-primary" style="padding: 15px 40px 15px;" type="submit">Send</button>
+            </div>
+           
+         </form>
+      </div>
+   </div>
+   
+   <!-- Feedback section end -->
+ 
+   <!-- footer section start -->
+   <div class="footer_section layout_padding" >
+      <div class="container">
+         <div class="footer_section_2">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <h2 class="useful_text text-center">Resources</h2>
+                  <div class="footer_menu text-center">
+                     <ul>
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#abstract">Abstract</a></li>
+                      <li><a href="#cnn">CNN Architecture</a></li>
+                      <li><a href="#doctor">Doctor's Opinion</a></li>
+                      <li><a href="#model">Interactive Model</a></li>
+                      <li><a href="#api">REST API</a></li>
+                      <li><a href="#architecture">Deployment</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-9 col-sm-6">               
+                 <div class="row">
+                  <div class="col-lg-9 col-sm-6">
+                    <h2 class="useful_text text-center">About</h2>
+                    <p align="center" class="footer_text">This project is made by Avik Kundu, a fellow MLOps enthusiast currently enrolled for B.Tech Degree at KIIT University, Bhubaneswar.
+                      <br>
+                      Special Thanks to Chandan Mishra & Meghdut Mandal for being part of the development process and the during the hurdles faced during deployment.
+                    </p>
+                    <br> <br> <br>
+                    <h3 class="useful_text text-center">Find out more about me!</h3>
+                    <ul class="social_footer_ul">
+                      <li><a href="https://github.com/Lucifergene" target="_blank"><i class="fab fa-github"></i></a></li>
+                      <li><a href="https://twitter.com/avik6028" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="https://medium.com/@avik6028" target="_blank"><i class="fab fa-medium"></i></a></li>
+                      <li><a href="https://www.facebook.com/avikonweb" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="https://linkedin.com/in/avik-kundu-0b837715b/" target="_blank"><i class="fab fa-linkedin" target="_blank"></i></a></li>
+                    </ul>                   
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="map_image"><img style="margin-top: 56px" src="static/images/avik.png"></div>
+                  </div>
+                 </div>   
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  
+   <!-- footer section end -->
+   <!-- copyright section start -->
+   <div class="copyright_section">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <p class="copyright_text">© 2020 All Rights Reserved.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- copyright section end -->
+ 
+   <!-- Javascript files-->
+   <script src="static/js/jquery.min.js"></script>
+   <script src="static/js/popper.min.js"></script>
+   <script src="static/js/bootstrap.bundle.min.js"></script>
+   <script src="static/js/jquery-3.0.0.min.js"></script>
+   <script src="static/js/plugin.js"></script>
+   <!-- sidebar -->
+   <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="static/js/custom.js"></script>
+   <!-- javascript --> 
+   <script src="static/js/owl.carousel.js"></script>
+   <!-- <script src="static/js/fullpage.js"></script> -->
+   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   <script>
+      $(document).ready(function(){
+      $(".fancybox").fancybox({
+      openEffect: "none",
+      closeEffect: "none"
+      });
+           
+      $(".zoom").hover(function(){
+           
+      $(this).addClass('transition');
+      }, function(){
+           
+      $(this).removeClass('transition');
+      });
+      });
+   </script> 
+   <script>
+      function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+      }
+      function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+      }
+   </script>  
+  </body>
+
+
+  <footer>
+    <script src="{{ url_for('static',filename='main.js') }}"></script>
+  </footer>
+</html>

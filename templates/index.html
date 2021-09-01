@@ -1,0 +1,81 @@
+{% extends "base.html" %} {% block contentier %}
+
+<div class="news_section layout_padding" id="model">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="news_taital">Interactive Model</h1>
+        <p class="news_text">Upload the scanned images of Chest X-Rays here and get the prediction instantly. Currently, CT images are not supported</p>
+      </div>
+    </div>
+
+    <!-- Form  -->
+    <div class="row">
+      <div class="col-sm-12">
+      <form onsubmit="return false" id="myForm" action="/save" method="post">
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input type="text" class="form-control" name="fullname" placeholder="Enter name of the patient" id="fullname" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" class="form-control" name="age" placeholder="Enter age of the patient" id="age" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control" name="email" placeholder="Enter email for receiving detailed predictions" id="email" required>
+        </div> 
+        <input type="hidden" id="resulter" name="resulter" value=""> 
+        <input type="hidden" id="imgb64" name="imgb64" value="">      
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> I agree to cross-examine the reports from doctors before starting any medications
+          </label>
+        </div>
+      </form>
+     </div>
+  </div>
+
+
+    <div class="news_section_2 layout_padding">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="box_main">
+            <div class="begg">
+            <div class="panel">
+              <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg" />
+              <label for="file-upload" id="file-drag" class="upload-box">
+                <div id="upload-caption"><h1 class="news_taital">Drop image here or click to select</h1></div>
+                <img id="image-preview" class="hidden" />
+              </label>
+            </div>
+            <!-- <div style="margin-bottom: 2rem; padding: 20px 100px;"> -->
+              <div class="text-center" style="padding-bottom: 40.5px">
+              <input type="button" value="Submit" class="button" onclick="submitImage();" />
+              <input type="button" value="Clear" class="button" onclick="clearImage();" />
+              <input type="button" value="Save" class="button" onclick="formSub();" />     
+            </div>
+            <!-- </div> -->
+          </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="box_main">
+            <h1 class="news_taital">Rendered Result</h1>
+            <div id="image-box">
+              <img id="image-display" />
+              <div id="pred-result" class="hidden"></div>
+              <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
+                <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
