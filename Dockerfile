@@ -13,4 +13,4 @@ RUN 7z e datty.7z.001
 WORKDIR /app
 
 EXPOSE 5000
-CMD [ "flask" , "app.py"]
+CMD [ "flask" , "run"]
