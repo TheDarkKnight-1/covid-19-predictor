@@ -24,7 +24,7 @@ jobs:
           DOCKER_USER: ${{ secrets.DOCKER_USER }}   
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
         run: |
-          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD      
+          docker login -u $DOCKER_USER -p d400f1c6-5c4d-4415-8fc8-815485160d14      
       - name: heroku login
         env: 
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
